@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="DevX.View.Pages.AddNewStudent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Finp="clr-namespace:DevX.View.UserControls.FormInputs"
+             xmlns:local="clr-namespace:DevX.View.Pages"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Add New Student" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <Finp:InputLabels MLabelText="Name"/>
+            <Finp:FormInput LabelText="Enter Name"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <Finp:InputLabels MLabelText="Father Name" Margin="10,0,0,0"/>
+            <Finp:FormInput LabelText="Enter Father Name" Margin="10,0,0,0"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="0">
+            <Finp:InputLabels MLabelText="Email Address"/>
+            <Finp:FormInput LabelText="Enter Email"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <Finp:InputLabels MLabelText="Phone Number" Margin="10,0,0,0"/>
+            <Finp:FormInput LabelText="Enter Phone Number" Margin="10,0,0,0"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3">
+            <Finp:InputLabels MLabelText="Class"/>
+            <Finp:FormInput LabelText="Enter Class"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="1">
+            <Finp:InputLabels MLabelText="Fee" Margin="10,0,0,0"/>
+            <Finp:FormInput LabelText="Enter Fee" Margin="10,0,0,0"/>
+        </StackPanel>
+        <StackPanel Grid.Row="4">
+            <Finp:InputLabels MLabelText="Joining Data"/>
+            <Finp:DateTimePicker/>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Finp:SaveButton Background="Teal" BorderThickness="0" Foreground="White" MCommand="{Binding StudentSaveButton}" ButtonContent="Save Student" />
+        </StackPanel>
+    </Grid>
+</UserControl>
